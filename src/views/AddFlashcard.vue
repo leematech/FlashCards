@@ -1,17 +1,30 @@
 <template>
-  <div>
-    <h1>Create a Flashcard</h1>
+  <div class="page container">
+    <h1 class="text-center my-4">Create a Flashcard</h1>
     <form @submit.prevent="submitForm">
-      <div>
-        <label for="front">Front Text</label>
-        <input v-model="frontText" id="front" required />
+      <div class="mb-3">
+        <label for="front" class="form-label">Front Text</label>
+        <textarea
+          v-model="frontText"
+          id="front"
+          required
+          rows="4"
+          class="form-control"
+          placeholder="Enter the front text here..."
+        ></textarea>
       </div>
-      <div>
-        <label for="back">Back Text</label>
-        <input v-model="backText" id="back" required />
+      <div class="mb-3">
+        <label for="back" class="form-label">Back Text</label>
+        <textarea
+          v-model="backText"
+          id="back"
+          required
+          rows="4"
+          class="form-control"
+          placeholder="Enter the back text here..."
+        ></textarea>
       </div>
-      <!-- Automatically set reviewDate and status, no user input for these -->
-      <button type="submit">Add Flashcard</button>
+      <button type="submit" class="btn btn-success w-100">Add Flashcard</button>
     </form>
   </div>
 </template>
